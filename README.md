@@ -4,3 +4,6 @@ Goal: To become more confident and familiar with R and GitHub.
 
 ## Labs 
 Each completed lab is saved as "LabXX_AB". 
+
+## Homework
+Each homework completed is labeled as "HWXX_AB".
