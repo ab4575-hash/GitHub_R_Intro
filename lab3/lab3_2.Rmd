@@ -44,7 +44,7 @@ Notice that when the data are imported, you are presented with a message that te
 
 Use the `str()` function to get an idea of the data structure of `hot_springs`.  
 ```{r}
-
+str(hot_springs)
 ```
 
 ## Change column classes
@@ -54,10 +54,15 @@ Recall that factors are categorical variables that have a fixed number of possib
 
 What is the class of the scientist column? Let's change it to factor and then show the levels of that factor.  
 ```{r}
+#What is the class of the scientist column? Let's change it to factor and then show the levels of that factor. 
 
-```
+class(hot_springs$scientist)   #The class is character.
 
-```{r}
+#Change it to factor
+hot_springs$scientist <- as.factor(hot_springs$scientist)
+
+#Levels of the Scientist factor variable 
+levels(hot_springs$scientist)
 
 ```
 
@@ -70,10 +75,17 @@ Did our change work? We can also check the levels of each column.
 1. Change the class of the springs column to factor.
 ```{r}
 
+#Change the class of the springs column to factor.
+class(hot_springs$spring)
+hot_springs$spring <-  as.factor(hot_springs$spring)
+
 ```
 
 2. What are the levels of the springs column?
 ```{r}
+
+#What are the levels of the springs column?
+levels(hot_springs$spring)
 
 ```
 
