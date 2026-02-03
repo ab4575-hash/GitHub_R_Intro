@@ -69,7 +69,7 @@ levels(hot_springs$scientist)
 Did our change work? We can also check the levels of each column.
 ```{r}
 
-#Yes, it changed from character to 
+#Yes, it changed from character to factors (catergorical variable).
 
 ```
 

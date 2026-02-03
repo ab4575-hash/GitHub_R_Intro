@@ -1,6 +1,6 @@
 ---
 title: "Homework 3"
-author: "Your Name Here"
+author: "Anaisía Brown"
 date: "`r Sys.Date()`"
 output:
   html_document: 
@@ -19,35 +19,59 @@ In order to answer the questions below, you will need to do a little online rese
 
 **1. Make three new vectors that show the name, height in feet, and height in meters of the five tallest mountains in the world.**
 ```{r}
+mountain <- c("Everest","K2","Kangchenjunga","Lhotse","Makalu")
 
+feet <- c(29031.7, 28251, 28169, 27940, 27838  )
+  
+meters <- c(8848,8611,8586,8516,8485)  
 ```
 
 **2. Combine these vectors into a data frame called `mountains`.**
 ```{r}
-
+mountains <- tibble (mountain, feet, meters)
+mountains
 ```
 
 **3. What is the mean height of the mountains in feet?**
 ```{r}
 
+mean(mountains$feet)
+
 ```
 
 **4. When were each of these mountains first climbed (i.e. in what year)? Make a new vector `first_climbed` and add it to the `mountains` data frame.**
 ```{r}
+#new vector 
+first_climbed <- c(1953,1954,1955,1956,1955)
 
 ```
 
 ```{r}
+#add new vector to data frame
+mountains$first_climbed <- first_climbed
 
+glimpse(mountains)
 ```
 
 **5. How many times have each of these mountains been climbed? Make a new vector `summits` and add it to the `mountains` data frame.**
 ```{r}
+summits <- c()
 
+mountains$summits <- summits
+
+glimpse(mountains)
 ```
 
 **6. Which mountain has the highest number of fatalities? Make a new vector `fatalities` and add it to the `mountains` data frame.**
 ```{r}
+
+fatalites <- c()
+
+fatalites <- mountains$fatalities <- fatalities
+
+glimpse (mountains)
+
+max(fatalites)
 
 ```
 
@@ -63,16 +87,21 @@ In order to answer the questions below, you will need to do a little online rese
 
 **9. Clear your environment panel by cliking on the broom icon. Then read in your `mountains_data.csv` file to a new object called `mountains`.**
 ```{r}
+#Check working directory 
+getwd()
 
+#Clear environment.
 ```
 
 ```{r}
+#Read in Moutains.csv
 
+read.csv("mountains_data.csv")
 ```
 
 **10. Use a summary function of your choice to show the structure of your `mountains` data frame.**
 ```{r}
-
+summary(mountains)
 ```
 
 ## Knit and Upload
