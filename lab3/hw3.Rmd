@@ -28,14 +28,14 @@ meters <- c(8848,8611,8586,8516,8485)
 
 **2. Combine these vectors into a data frame called `mountains`.**
 ```{r}
-mountains <- tibble (mountain, feet, meters)
+mountains <- tibble (mountain, feet, meters) #combined vectors using the tibble function 
 mountains
 ```
 
 **3. What is the mean height of the mountains in feet?**
 ```{r}
 
-mean(mountains$feet)
+mean(mountains$feet)  #28,245.94 ft 
 
 ```
 
@@ -50,12 +50,13 @@ first_climbed <- c(1953,1954,1955,1956,1955)
 #add new vector to data frame
 mountains$first_climbed <- first_climbed
 
+#view if vector was added to the dataset
 glimpse(mountains)
 ```
 
 **5. How many times have each of these mountains been climbed? Make a new vector `summits` and add it to the `mountains` data frame.**
 ```{r}
-summits <- c()
+summits <- c(7563, 964, 312, 933, 891) #per individual
 
 mountains$summits <- summits
 
@@ -65,9 +66,9 @@ glimpse(mountains)
 **6. Which mountain has the highest number of fatalities? Make a new vector `fatalities` and add it to the `mountains` data frame.**
 ```{r}
 
-fatalites <- c()
+fatalities <- c(300, 92, 55, 50, 50)  #fatalities per mountain range 
 
-fatalites <- mountains$fatalities <- fatalities
+mountains$fatalities <- fatalities
 
 glimpse (mountains)
 
@@ -77,6 +78,8 @@ max(fatalites)
 
 **7. What is the fatality rate (i.e., fatalities divided by summits) for each mountain? Create a new vector `fatality_rate` and add it to the `mountains` data frame.**
 ```{r}
+
+fatalityrate <- c()
 
 ```
 
